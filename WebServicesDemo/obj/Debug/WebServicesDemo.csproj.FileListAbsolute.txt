@@ -1,0 +1,9 @@
+E:\UniFiles\Mohandesi narm\Project\WebServicesDemo\bin\WebServicesDemo.dll.config
+E:\UniFiles\Mohandesi narm\Project\WebServicesDemo\bin\WebServicesDemo.dll
+E:\UniFiles\Mohandesi narm\Project\WebServicesDemo\bin\WebServicesDemo.pdb
+E:\UniFiles\Mohandesi narm\Project\WebServicesDemo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\UniFiles\Mohandesi narm\Project\WebServicesDemo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\UniFiles\Mohandesi narm\Project\WebServicesDemo\obj\Debug\WebServicesDemo.csprojAssemblyReference.cache
+E:\UniFiles\Mohandesi narm\Project\WebServicesDemo\obj\Debug\WebServicesDemo.csproj.CopyComplete
+E:\UniFiles\Mohandesi narm\Project\WebServicesDemo\obj\Debug\WebServicesDemo.dll
+E:\UniFiles\Mohandesi narm\Project\WebServicesDemo\obj\Debug\WebServicesDemo.pdb
