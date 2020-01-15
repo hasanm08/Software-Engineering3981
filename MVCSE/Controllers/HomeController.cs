@@ -12,6 +12,7 @@ namespace MVCSE.Controllers
     {
         public IActionResult Index()
         {
+            Models.Test.TestMul();
             return View();
         }
 

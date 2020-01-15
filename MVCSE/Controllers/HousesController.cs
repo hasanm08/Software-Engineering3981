@@ -60,9 +60,9 @@ namespace MVCSE.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Adress,NumOfRooms,Area,OwnerId")] House house)
         {
-            ServiceReference1.GetDataSoapClient client = new ServiceReference1.GetDataSoapClient(ServiceReference1.GetDataSoapClient.EndpointConfiguration.GetDataSoap);
-            var res = client.AddAsync(5, -2);
-            WindowManager.MsgBoxResult result = WindowManager.Interaction.MsgBox(res.Result.ToString(), "Sum of 5 and -2 is", MsgBoxStyle.OkCancel);
+            //ServiceReference1.GetDataSoapClient client = new ServiceReference1.GetDataSoapClient(ServiceReference1.GetDataSoapClient.EndpointConfiguration.GetDataSoap);
+            //var res = client.AddAsync(5, -2);
+            //WindowManager.MsgBoxResult result = WindowManager.Interaction.MsgBox(res.Result.ToString(), "Sum of 5 and -2 is", MsgBoxStyle.OkCancel);
 
             if (ModelState.IsValid)
             {
@@ -72,6 +72,16 @@ namespace MVCSE.Controllers
             }
             ViewData["OwnerId"] = new SelectList(_context.Owner, "Id", "Id", house.OwnerId);
             return View(house);
+        }
+        public static int Mul(int a,int b)
+        {
+            int res = 0;
+            ServiceReference1.GetDataSoapClient client = new ServiceReference1.GetDataSoapClient(ServiceReference1.GetDataSoapClient.EndpointConfiguration.GetDataSoap);
+            for (int i = 0; i < b; i++)
+            {
+                res= client.AddAsync(res, a).Result;// change to return false
+            }
+            return res;
         }
 
         // GET: Houses/Edit/5
