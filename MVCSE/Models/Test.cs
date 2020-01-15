@@ -8,7 +8,7 @@ using WindowManager;
 namespace MVCSE.Models
 {
     public class Test
-    {
+    {//Unit test
         public static bool TestMul()
         {
             int res = MVCSE.Controllers.HousesController.Mul(2, 3);

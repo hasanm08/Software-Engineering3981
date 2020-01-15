@@ -12,7 +12,7 @@ namespace MVCSE.Controllers
     {
         public IActionResult Index()
         {
-            Models.Test.TestMul();
+            Models.Test.TestMul();//Call Unit test function
             return View();
         }
 

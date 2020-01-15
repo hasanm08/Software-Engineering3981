@@ -74,7 +74,7 @@ namespace MVCSE.Controllers
             return View(house);
         }
         public static int Mul(int a,int b)
-        {
+        {//Call WebService using Wcf
             int res = 0;
             ServiceReference1.GetDataSoapClient client = new ServiceReference1.GetDataSoapClient(ServiceReference1.GetDataSoapClient.EndpointConfiguration.GetDataSoap);
             for (int i = 0; i < b; i++)
