@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MVCSE.Data;
 using MVCSE.Models;
+using WindowManager;
 
 namespace MVCSE.Controllers
 {
@@ -59,6 +60,10 @@ namespace MVCSE.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Adress,NumOfRooms,Area,OwnerId")] House house)
         {
+            ServiceReference1.GetDataSoapClient client = new ServiceReference1.GetDataSoapClient(ServiceReference1.GetDataSoapClient.EndpointConfiguration.GetDataSoap);
+            var res = client.AddAsync(5, -2);
+            WindowManager.MsgBoxResult result = WindowManager.Interaction.MsgBox(res.Result.ToString(), "Sum of 5 and -2 is", MsgBoxStyle.OkCancel);
+
             if (ModelState.IsValid)
             {
                 _context.Add(house);
